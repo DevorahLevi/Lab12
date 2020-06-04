@@ -19,14 +19,14 @@ public class PersonTest {
     public void createTesterPeople()
     {
         bob = new Person(new Name("Bob", "Smith"), MALE, LocalDate.of(1960, Month.MARCH, 15));
-        bob.initializeEmailAddress("bobsmith@gmail.com", Type.HOME);
+        bob.setEmailAddress("bobsmith@gmail.com", Type.HOME);
         bob.setEmailAddress("smith.bob@careonerx.com", Type.WORK);
         bob.setEmailAddress("bob.smith@ti.htc.edu", Type.SCHOOL);
         jane = new Person(new Name("Jane", "Doe"), FEMALE, LocalDate.of(2007, Month.JANUARY, 3));
-        jane.initializeEmailAddress("doe.jane@careonerx.com", Type.WORK);
+        jane.setEmailAddress("doe.jane@careonerx.com", Type.WORK);
         jane.setEmailAddress("jane.doe@ti.htc.edu", Type.SCHOOL);
         ironMan = new Person(new Name("Tony", "Stark"), MALE,LocalDate.of(1968, Month.MAY, 13) );
-        ironMan.initializeEmailAddress("tonystark@gmail.com", Type.HOME);
+        ironMan.setEmailAddress("tonystark@gmail.com", Type.HOME);
         boPeep = new Person(new Name("Bo", "Peep"), FEMALE, LocalDate.of(1624, Month.FEBRUARY, 23));
     }
 

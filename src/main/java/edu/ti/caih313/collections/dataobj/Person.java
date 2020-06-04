@@ -37,13 +37,14 @@ public class Person {
         return ageNow.getYears();
     }
 
-    public void initializeEmailAddress(String email, EmailAddress.Type type)
-    {
-        emailAddress = new EmailAddress(email, type);
-    }
     public void setEmailAddress(String email, EmailAddress.Type type)
     {
-        emailAddress.emailMap.put(type, email);
+        if (emailAddress == null)
+        {
+            emailAddress = new EmailAddress(email, type);
+        } else {
+            emailAddress.emailMap.put(type, email);
+        }
     }
 
     @Override
